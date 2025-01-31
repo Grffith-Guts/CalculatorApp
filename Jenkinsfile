@@ -3,8 +3,7 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                echo 'Cloning the repository...'
-                git url: 'git@github.com:Grffith-Guts/CalculatorApp.git', credentialsId: 'GITSHH'
+                git branch: 'main', url: 'git@github.com:Grffith-Guts/CalculatorApp.git', credentialsId: 'GITSHH'
             }
         }
         stage('Build') {
